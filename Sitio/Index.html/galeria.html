@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fauvismo.com</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+     <a href="index.html">
+      <img src="../IMG/logo.png" alt="Fauvismo.com" class="logo">
+</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="historia.html">HISTORIA</a></li>
+        <li><a href="galeria.html">OBRAS</a></li>
+        <li><a href="exponentes.html">EXPONENTES</a></li>
+        <li><a href="experiencias.html">EXPERIENCIAS</a></li>
+        <li><a href="contacto.html">CONTACTO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <h1>OBRAS RECONOCIDAS</h1>
+
+  <section class="gallery">
+    <!-- Obra 1 -->
+    <div class="obra">
+      <img src="../IMG/obra con nombre.webp" alt="Obra 1" onclick="abrirLightbox(this)">
+      <h3>La alegría de vivir, 1906</h3>
+      <p>Henri Matisse</p>
+    </div>
+    <div class="obra"><img src="../IMG/obra con titulo 2.webp" alt="Obra 2" onclick="abrirLightbox(this)"><h3>Mujer en camisa, 1906</h3><p>André Derain</p></div>
+    <div class="obra"><img src="../IMG/obra con titulo 3.webp" alt="Obra 3" onclick="abrirLightbox(this)"><h3>El huerto, 1905</h3><p>Maurice de Vlaminck</p></div>
+    <div class="obra"><img src="../IMG/obra con titulo 4.webp" alt="Obra 4" onclick="abrirLightbox(this)"><h3>Bañistas, 1908</h3><p>Raoul Dufy</p></div>
+    <div class="obra"><img src="../IMG/obra con titulo 5.webp" alt="Obra 5" onclick="abrirLightbox(this)"><h3>Paisaje en Chatou,1904</h3><p>André Derain</p></div>
+    <div class="obra"><img src="../IMG/obra con titulo 6.webp" alt="Obra 6" onclick="abrirLightbox(this)"><h3>El río Sena en Chatou,1906</h3><p>Maurice Vlaminck</p></div>
+    <div class="obra"><img src="../IMG/obra con titulo 8.webp" alt="Obra 7" onclick="abrirLightbox(this)"><h3>La Danse,1910</h3><p>Henri Matisse</p></div>
+    <div class="obra"><img src="../IMG/obra con titulo 7.webp" alt="Obra 8" onclick="abrirLightbox(this)"><h3>La Sieste,1905</h3><p>Henri Manguin</p></div>
+    <div class="obra"><img src="../IMG/obra con titulo 9.jpg" alt="Obra 9" onclick="abrirLightbox(this)"><h3>Restaurant de la Machine à Bougival, ca. 1905</h3><p>Maurice de Vlaminck</p></div>
+    <div class="obra"><img src="../IMG/obra con titulo 10.jpg" alt="Obra 10" onclick="abrirLightbox(this)"><h3>Bateaux à Collioure, 1905</h3><p>André Derain</p></div>
+    <div class="obra"><img src="../IMG/obra con titulo 11.jpg" alt="Obra 11" onclick="abrirLightbox(this)"><h3>Figure à l’ombrelle, 1905</h3><p>Henri Matisse</p></div>
+    <div class="obra"><img src="../IMG/obra con titulo 12.jpg" alt="Obra 12" onclick="abrirLightbox(this)"><h3>Les Voiles rouges, 1906</h3><p>André Derain</p></div>
+    
+    
+    
+    
+    
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="cerrarLightbox()">
+    <span class="cerrar">&times;</span>
+    <img class="lightbox-img" id="imagenAmpliada">
+    <div id="caption"></div>
+  </div>
+
+  <script>
+    function abrirLightbox(img) {
+      const lightbox = document.getElementById("lightbox");
+      const imagenAmpliada = document.getElementById("imagenAmpliada");
+      const caption = document.getElementById("caption");
+
+      lightbox.style.display = "flex";
+      imagenAmpliada.src = img.src;
+      caption.innerHTML = img.alt;
+    }
+
+    function cerrarLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+   
+
+  <footer>
+    <div class="footer-content">
+      <a href="https://wa.me/123456789" class="footer-icon">📱</a>
+      <a href="mailto:info@fauvismo.com" class="footer-icon">✉️</a>
+    </div>
+  </footer>
+</body>
+</html>
